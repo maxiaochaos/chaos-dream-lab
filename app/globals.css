@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  /* Authentic Severance (Lumon MDR) × 35mm Film Screening Room Palette */
+  --lumon-bg: #061117;
+  --lumon-surface: #0a1921;
+  --lumon-elevated: #10242e;
+  --lumon-paper: #eaf4f4;
+  --lumon-muted: #8eaab3;
+  --lumon-dim: #55707a;
+  --lumon-teal: #7dd8e8;
+  --lumon-teal-soft: rgba(125, 216, 232, 0.14);
+  --lumon-amber: #daa75a;
+  --lumon-red: #cf564a;
+  --lumon-border: rgba(154, 218, 232, 0.17);
+  --lumon-border-strong: rgba(125, 216, 232, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--lumon-bg);
+  color: var(--lumon-paper);
+  font-family: var(--font-sans-cn), -apple-system, BlinkMacSystemFont, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  overflow-x: hidden;
+}
+
+.font-cinema {
+  font-family: var(--font-serif-en), var(--font-serif-cn), "Songti SC", "STSong", Georgia, serif;
+}
+
+.font-reel {
+  font-family: var(--font-mono-code), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Subtle Lumon architectural drafting grid */
+.lumon-grid-bg {
+  background-image:
+    linear-gradient(rgba(125, 216, 232, 0.032) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125, 216, 232, 0.032) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Precision Severance MDR terminal panel */
+.lumon-panel {
+  background: linear-gradient(180deg, rgba(12, 27, 36, 0.94), rgba(7, 18, 24, 0.97));
+  border: 1px solid var(--lumon-border);
+  box-shadow:
+    inset 0 1px 0 rgba(234, 244, 244, 0.05),
+    0 12px 32px rgba(2, 8, 12, 0.45);
+}
+
+/* Iconic Severance double horizontal rule */
+.lumon-double-rule {
+  border-top: 1px solid rgba(125, 216, 232, 0.34);
+  border-bottom: 1px solid rgba(125, 216, 232, 0.16);
+  height: 4px;
+}
+
+/* Subtle analog cinema grain overlay */
+.cinema-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 220px 220px;
+}
+
+/* 35mm film sprocket strip edge */
+.film-sprockets {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 8px,
+    rgba(154, 218, 232, 0.22) 8px,
+    rgba(154, 218, 232, 0.22) 18px,
+    transparent 18px,
+    transparent 26px
+  );
+  background-size: 26px 6px;
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+/* Subtle CRT / MDR terminal scanline for screen frames only */
+.mdr-scanlines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(125, 216, 232, 0.04) 0px,
+    rgba(125, 216, 232, 0.04) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #061117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(154, 218, 232, 0.2);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(125, 216, 232, 0.52);
+}
+
+@keyframes rec-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(207, 86, 74, 0.55);
+  }
+  50% {
+    opacity: 0.72;
+    box-shadow: 0 0 0 9px rgba(207, 86, 74, 0);
+  }
+}
+
+.animate-rec-pulse {
+  animation: rec-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes orb-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(var(--orb-dx, 8px), var(--orb-dy, -8px), 0);
+  }
+}

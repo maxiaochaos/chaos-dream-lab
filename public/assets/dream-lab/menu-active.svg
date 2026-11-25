@@ -1,0 +1,53 @@
+<svg width="230" height="48" viewBox="0 0 230 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="230" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#35100d"/>
+      <stop offset="0.3" stop-color="#1c1110"/>
+      <stop offset="0.68" stop-color="#0c0d0c"/>
+      <stop offset="1" stop-color="#050605"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="230" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff5d52"/>
+      <stop offset="0.2" stop-color="#c5352e"/>
+      <stop offset="0.7" stop-color="#4a1714"/>
+      <stop offset="1" stop-color="#120606"/>
+    </linearGradient>
+    <radialGradient id="rustA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(23 6) rotate(22) scale(68 18)">
+      <stop stop-color="#7b3b1f" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#1b0805" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rustB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(185 44) rotate(-10) scale(58 18)">
+      <stop stop-color="#6a2b18" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#1b0805" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="rough" x="-10%" y="-20%" width="120%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.62" numOctaves="5" seed="44"/>
+      <feColorMatrix type="matrix" values="0.35 0 0 0 0.08 0 0.28 0 0 0.06 0 0 0.2 0 0.05 0 0 0 0.5 0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.05 0.22 0.5"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="innerShadow" x="-10%" y="-20%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="229" height="47" rx="2" fill="url(#bg)" stroke="#5f3229"/>
+  <rect x="0.5" y="0.5" width="229" height="47" rx="2" fill="url(#rustA)"/>
+  <rect x="0.5" y="0.5" width="229" height="47" rx="2" fill="url(#rustB)"/>
+  <rect x="1" y="1" width="228" height="46" filter="url(#rough)" opacity="0.85"/>
+  <rect x="3" y="4" width="224" height="40" rx="1.5" stroke="#1c0b09" stroke-opacity="0.9" filter="url(#innerShadow)"/>
+
+  <rect x="0" y="0" width="230" height="2" fill="url(#edge)"/>
+  <rect x="0" y="46" width="230" height="1" fill="#090504"/>
+  <rect x="0" y="0" width="1.5" height="48" fill="#80231f"/>
+  <rect x="228.5" y="0" width="1.5" height="48" fill="#31100e"/>
+
+  <path d="M11 9h42M74 7h61M18 39h88M147 11h52M128 38h78" stroke="#b6866e" stroke-opacity="0.16" stroke-width="0.8"/>
+  <path d="M31 4l-15 39M215 8l-9 25M151 3l-26 44" stroke="#000" stroke-opacity="0.3" stroke-width="0.9"/>
+  <path d="M9 34c18-4 34-2 50 1M141 6c20 2 43 1 62-2" stroke="#d07852" stroke-opacity="0.18"/>
+
+  <path d="M178 25h6l2-8 4 18 4-24 4 18 3-10 3 7h7" stroke="#ff625a" stroke-width="1.1" opacity="0.9"/>
+  <rect x="0" y="0" width="230" height="48" fill="url(#edge)" opacity="0.08"/>
+  <rect x="1" y="1" width="228" height="46" rx="2" stroke="#ff554d" stroke-opacity="0.18"/>
+</svg>

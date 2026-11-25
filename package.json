@@ -1,0 +1,24 @@
+{
+  "name": "dream-lab-terminal",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.111.3",
+    "@react-three/fiber": "^8.17.10",
+    "@react-three/postprocessing": "^2.16.3",
+    "next": "^14.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "three": "^0.174.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.7",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.7"
+  }
+}
